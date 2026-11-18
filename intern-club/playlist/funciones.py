@@ -31,6 +31,7 @@ def filtrar_por_genero(playlist, genero):
         -> [{'titulo': 'De Musica Ligera', ...}, {'titulo': 'Rayando el Sol', ...}]
     """
     # TODO: tu codigo aqui
+    
     pass
 
 
@@ -48,7 +49,15 @@ def cancion_mas_larga(playlist):
         -> {'titulo': 'Rayando el Sol', 'artista': 'Mana', 'genero': 'Rock', 'duracion_segundos': 251}
     """
     # TODO: tu codigo aqui
-    pass
+    if len(playlist) <= 0:
+        return None
+    longest = playlist[0]
+    for i in range(len(playlist)):
+        cancion = playlist[i]
+        duracion = cancion["duracion_segundos"]
+        if duracion > longest["duracion_segundos"]:
+            longest = cancion
+    return longest
 
 
 def buscar_por_artista(playlist, artista):
@@ -103,4 +112,12 @@ def recomendar(playlist, genero):
         -> {'titulo': 'De Musica Ligera', 'artista': 'Soda Stereo', ...}
     """
     # TODO: tu codigo aqui
+    recommendation = None
+    # r = random.randint(1, playlist.length)
+    # for i in r:
+    #     song = playlist[i]
+    #     genre = song["genero"]
+    #     if genre == genero:
+    #         recomendation = song
+    # return recomendation
     pass

@@ -28,3 +28,6 @@ PLAYLIST = [
     # Una linea por cancion y agrega un comentario con tu nombre.
     # Ejemplo: {"titulo": "...", "artista": "...", "genero": "...", "duracion_segundos": 180},  # Juan Perez
 ]
+
+# get(key, default) # .keys() # values() # items() # update() # setdefault(key, default) 
+# # pop(key, value) # popitem(key, value) # clear() # copy()

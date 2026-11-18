@@ -1,6 +1,7 @@
 import random
 from playlist import PLAYLIST
 from funciones import duracion_total
+from funciones import cancion_mas_larga
 
 
 def main():
@@ -18,7 +19,6 @@ def main():
     if len(PLAYLIST) > 0:
         cancion_aleatoria = random.choice(PLAYLIST)
         print(f"\nAhora suena: {cancion_aleatoria['titulo']} - {cancion_aleatoria['artista']}")
-
 
 if __name__ == "__main__":
     main()

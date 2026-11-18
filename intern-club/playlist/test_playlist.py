@@ -1,13 +1,13 @@
 from funciones import duracion_total
 
 # Descomenta las funciones conforme las vayas implementando:
-# from funciones import (
-#     filtrar_por_genero,
-#     cancion_mas_larga,
-#     buscar_por_artista,
-#     mezclar,
-#     recomendar,
-# )
+from funciones import (
+    filtrar_por_genero,
+    cancion_mas_larga,
+    buscar_por_artista,
+    mezclar,
+    recomendar,
+)
 
 # Playlist de prueba con datos conocidos
 MUESTRA_PRUEBA = [
@@ -45,10 +45,10 @@ def test_duracion_total():
 #     assert rock[0]["titulo"] == "Cancion B"
 #     assert filtrar_por_genero(MUESTRA_PRUEBA, "Jazz") == [], "Genero inexistente debe regresar lista vacia"
 
-# def test_cancion_mas_larga():
-#     larga = cancion_mas_larga(MUESTRA_PRUEBA)
-#     assert larga["titulo"] == "Cancion A", "La cancion mas larga debe ser 'Cancion A' (120 seg)"
-#     assert cancion_mas_larga([]) is None, "Una playlist vacia debe regresar None"
+def test_cancion_mas_larga():
+    larga = cancion_mas_larga(MUESTRA_PRUEBA)
+    assert larga["titulo"] == "Cancion A", "La cancion mas larga debe ser 'Cancion A' (120 seg)"
+    assert cancion_mas_larga([]) is None, "Una playlist vacia debe regresar None"
 
 # def test_buscar_por_artista():
 #     canciones = buscar_por_artista(MUESTRA_PRUEBA, "Artista 1")
@@ -73,7 +73,7 @@ def ejecutar_pruebas():
 
     # Descomenta la llamada a la prueba de tu funcion aqui:
     # test_filtrar_por_genero()
-    # test_cancion_mas_larga()
+    test_cancion_mas_larga()
     # test_buscar_por_artista()
     # test_mezclar()
     # test_recomendar()
